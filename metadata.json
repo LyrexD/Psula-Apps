@@ -1,0 +1,6 @@
+{
+  "name": "Psula",
+  "description": "Kişisel hedeflerinizi belirleyin, günlük görevlerinizi takip edin ve alışkanlıklarınızı geliştirin.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
