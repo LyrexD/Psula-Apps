@@ -2,6 +2,11 @@
 
 Psula; hedefleri, görevleri ve alışkanlıkları tek bir ekranda düzenlemeye yardımcı olan, yerel öncelikli bir Android üretkenlik uygulamasıdır.
 
+[![Android CI](https://github.com/LyrexD/Psula-Apps/actions/workflows/android.yml/badge.svg)](https://github.com/LyrexD/Psula-Apps/actions/workflows/android.yml)
+![Kotlin](https://img.shields.io/badge/Kotlin-2.2-7F52FF?logo=kotlin&logoColor=white)
+![Android](https://img.shields.io/badge/Android-API%2024%2B-3DDC84?logo=android&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 > Proje aktif geliştirme aşamasındadır. Veriler şu anda cihazda Room ile saklanır; ekrandaki senkronizasyon akışı bir arayüz prototipidir ve uzak sunucuya veri göndermez.
 
 ![Psula ekran görüntüsü](app/src/test/screenshots/greeting.png)
@@ -66,7 +71,7 @@ GitHub Actions aynı kontrolleri her push ve pull request için çalıştırır.
 ## Proje yapısı
 
 ```text
-app/src/main/java/com/example/
+app/src/main/java/com/lyrexd/psula/
 ├── data/       # Room entity, DAO, database ve repository
 ├── ui/         # Compose ekranları ve ViewModel
 └── MainActivity.kt
@@ -80,9 +85,9 @@ app/src/main/java/com/example/
 - Daha kapsamlı ViewModel ve veri katmanı testleri
 - Paket adını kalıcı ürün alan adına taşımak
 
-## Katkı
+## Katkı ve güvenlik
 
-Hata bildirimi ve geliştirme önerileri için bir issue açabilirsiniz. Değişiklik göndermeden önce mevcut testlerin geçtiğinden emin olun.
+Katkı akışı için [CONTRIBUTING.md](CONTRIBUTING.md), güvenlik bildirimi için [SECURITY.md](SECURITY.md) dosyasına bakın.
 
 ## Lisans
 

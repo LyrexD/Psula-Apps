@@ -1,0 +1,32 @@
+name: Hata bildirimi
+description: Tekrar üretilebilir bir Android uygulama problemi bildirin.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Ne oldu ve ne olmasını bekliyordunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Tekrar üretme adımları
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Cihaz ve sürüm
+      description: Cihaz/emülatör, Android sürümü ve uygulama sürümü
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Kontrol
+      options:
+        - label: Hassas veri veya güvenlik açığı paylaşmadım.
+          required: true

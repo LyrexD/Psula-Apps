@@ -1,0 +1,17 @@
+name: Özellik önerisi
+description: Psula'ya değer katacak odaklı bir geliştirme önerin.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Kullanıcı problemi
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Önerilen çözüm
+    validations:
+      required: true

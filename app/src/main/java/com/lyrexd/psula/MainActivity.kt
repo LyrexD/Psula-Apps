@@ -1,4 +1,4 @@
-package com.example
+package com.lyrexd.psula
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,10 +9,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.ui.DashboardScreen
-import com.example.ui.DashboardViewModel
-import com.example.ui.DashboardViewModelFactory
-import com.example.ui.theme.MyApplicationTheme
+import com.lyrexd.psula.ui.DashboardScreen
+import com.lyrexd.psula.ui.DashboardViewModel
+import com.lyrexd.psula.ui.DashboardViewModelFactory
+import com.lyrexd.psula.ui.theme.PsulaTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyApplicationTheme {
+            PsulaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     DashboardScreen(
                         viewModel = viewModel,

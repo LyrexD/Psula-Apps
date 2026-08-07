@@ -1,4 +1,4 @@
-package com.example.ui
+package com.lyrexd.psula.ui
 
 import android.app.Application
 import androidx.compose.runtime.getValue
@@ -9,11 +9,11 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.data.AppDatabase
-import com.example.data.DashboardRepository
-import com.example.data.Goal
-import com.example.data.Habit
-import com.example.data.Task
+import com.lyrexd.psula.data.AppDatabase
+import com.lyrexd.psula.data.DashboardRepository
+import com.lyrexd.psula.data.Goal
+import com.lyrexd.psula.data.Habit
+import com.lyrexd.psula.data.Task
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

@@ -1,4 +1,4 @@
-package com.example
+package com.lyrexd.psula
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -12,9 +12,9 @@ import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.ui.theme.MyApplicationTheme
-import com.example.ui.theme.EmeraldPrimary
-import com.example.ui.theme.DarkBg
+import com.lyrexd.psula.ui.theme.PsulaTheme
+import com.lyrexd.psula.ui.theme.EmeraldPrimary
+import com.lyrexd.psula.ui.theme.DarkBg
 import com.github.takahirom.roborazzi.RobolectricDeviceQualifiers
 import com.github.takahirom.roborazzi.captureRoboImage
 import org.junit.Rule
@@ -35,7 +35,7 @@ class GreetingScreenshotTest {
   @Test
   fun greeting_screenshot() {
     composeTestRule.setContent { 
-      MyApplicationTheme { 
+      PsulaTheme {
         Box(
           modifier = Modifier
               .fillMaxSize()

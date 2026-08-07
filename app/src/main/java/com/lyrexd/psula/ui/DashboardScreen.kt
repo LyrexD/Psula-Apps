@@ -1,4 +1,4 @@
-package com.example.ui
+package com.lyrexd.psula.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -42,10 +42,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.data.Goal
-import com.example.data.Habit
-import com.example.data.Task
-import com.example.ui.theme.*
+import com.lyrexd.psula.data.Goal
+import com.lyrexd.psula.data.Habit
+import com.lyrexd.psula.data.Task
+import com.lyrexd.psula.ui.theme.*
 import java.text.SimpleDateFormat
 import java.util.*
 
