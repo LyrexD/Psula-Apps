@@ -4,7 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
-    open-pull-requests-limit: 5
+    # Security alerts and automated security fixes remain enabled at repository level.
+    # Android toolchain upgrades are handled as deliberate, fully tested migrations.
+    open-pull-requests-limit: 0
     ignore:
       - dependency-name: "*"
         update-types:
@@ -21,6 +23,7 @@ updates:
     directory: "/"
     schedule:
       interval: monthly
+    open-pull-requests-limit: 0
     groups:
       actions:
         patterns: ["*"]
