@@ -9,7 +9,9 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
-@Config(sdk = [36])
+// Robolectric 4.16 does not yet provide Android API 36/36.1 runtime jars.
+// API 35 is sufficient for this resource-level test and keeps CI deterministic.
+@Config(sdk = [35])
 class ExampleRobolectricTest {
 
   @Test
