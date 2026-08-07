@@ -1,21 +1,89 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Psula
 
-# Run and deploy your AI Studio app
+Psula; hedefleri, görevleri ve alışkanlıkları tek bir ekranda düzenlemeye yardımcı olan, yerel öncelikli bir Android üretkenlik uygulamasıdır.
 
-This contains everything you need to run your app locally.
+> Proje aktif geliştirme aşamasındadır. Veriler şu anda cihazda Room ile saklanır; ekrandaki senkronizasyon akışı bir arayüz prototipidir ve uzak sunucuya veri göndermez.
 
-View your app in AI Studio: https://ai.studio/apps/c85bf4c3-a535-4269-a026-869c32de1021
+![Psula ekran görüntüsü](app/src/test/screenshots/greeting.png)
 
-## Run Locally
+## Özellikler
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+- Hedef oluşturma, ilerleme güncelleme ve tamamlama
+- Öncelik ve son tarih içeren görev yönetimi
+- Günlük alışkanlık takibi ve seri hesaplama
+- Hedef, görev ve alışkanlıkların birlikte gösterildiği kontrol paneli
+- Açık ve koyu tema destekli Material 3 arayüzü
+- Room tabanlı cihaz içi veri saklama
+- JSON biçiminde yerel veri özeti oluşturma
 
+## Teknik yapı
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+| Katman | Kullanılan yapı |
+| --- | --- |
+| Arayüz | Kotlin, Jetpack Compose, Material 3 |
+| Durum yönetimi | ViewModel, StateFlow, Coroutines |
+| Veri | Room, DAO, Repository |
+| Test | JUnit, Robolectric, Compose UI Test, Roborazzi |
+| Minimum Android | API 24 |
+
+Uygulama, UI ile veri erişimini ayırmak için `ViewModel → Repository → DAO → Room` akışını kullanır. Room sorguları `Flow` döndürür; ViewModel bu akışları `StateFlow` olarak arayüze sunar.
+
+## Kurulum
+
+### Gereksinimler
+
+- Android Studio
+- JDK 17
+- Android SDK 36
+- Gradle 9.3.1
+
+### Çalıştırma
+
+1. Repoyu klonlayın:
+
+   ```bash
+   git clone https://github.com/LyrexD/Psula-Apps.git
+   cd Psula-Apps
+   ```
+
+2. Projeyi Android Studio ile açın.
+3. Gradle senkronizasyonunun tamamlanmasını bekleyin.
+4. API 24 veya üzeri bir emülatör ya da fiziksel cihaz seçin.
+5. `app` yapılandırmasını çalıştırın.
+
+Uygulamanın mevcut özellikleri için API anahtarı gerekmez.
+
+## Test ve kalite kontrolleri
+
+Android Studio içinden testleri çalıştırabilir veya Gradle 9.3.1 kurulu bir ortamda aşağıdaki komutları kullanabilirsiniz:
+
+```bash
+gradle testDebugUnitTest lintDebug assembleDebug
+```
+
+GitHub Actions aynı kontrolleri her push ve pull request için çalıştırır.
+
+## Proje yapısı
+
+```text
+app/src/main/java/com/example/
+├── data/       # Room entity, DAO, database ve repository
+├── ui/         # Compose ekranları ve ViewModel
+└── MainActivity.kt
+```
+
+## Yol haritası
+
+- Demo verisini tercihe bağlı hale getirmek
+- Gerçek yedekleme ve geri yükleme akışı
+- Bildirimler ve hatırlatıcılar
+- Daha kapsamlı ViewModel ve veri katmanı testleri
+- Paket adını kalıcı ürün alan adına taşımak
+
+## Katkı
+
+Hata bildirimi ve geliştirme önerileri için bir issue açabilirsiniz. Değişiklik göndermeden önce mevcut testlerin geçtiğinden emin olun.
+
+## Lisans
+
+Bu proje MIT Lisansı ile yayımlanır. Ayrıntılar için [LICENSE](LICENSE) dosyasına bakın.
